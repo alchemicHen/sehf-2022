@@ -1,8 +1,7 @@
 # Import package
-import yfinance as yf
+import pandas as pd
+import numpy as np
 
-# Get the data
-data = yf.download(tickers="MSFT", period="5d", interval="1m")
+# import from CSV
+prices = pd.read_csv('price_mid_wkly.csv', index_col = 0, low_memory = False)
 
-# Print the data
-print(data.tail())
